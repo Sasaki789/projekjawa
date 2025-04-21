@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    *{
+        margin: 0;
+        padding : 0;
+        font-size: 30px;
+    }
+    body{
+        background-color: rgb(78, 73, 73);
+    }
+    .container{
+        width: 100%;
+        height: 100px;
+        background-color: red;
+    }
+    .container2{ 
+        display: flex;
+        align-items: center;
+    }
+    .container3{
+        width: 100% ;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+       
+    }
+    .container4{
+        width: 100%;
+        height: 100%;flex-wrap: nowrap;
+        justify-content: space-evenly;
+        flex-direction: row;
+       
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        background-color:rgb(255, 225, 196);
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    nav div img{
+        width: 100px;
+        padding: 10px;
+        border-radius: 60px;
+        }
+   
+    ul{
+        list-style: none;
+        gap: 1rem;
+    }
+    li{
+        text-decoration: none;
+        display:inline-block;
+    }
+    ul li a{
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+        display: block;
+        font-weight: 600;
+        text-align: center;
+        padding: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-transform: capitalize;
+       
+    }
+    .jawa{
+        text-align: center;
+    }
+    .dropdown {
+        display: none;
+        position: absolute;
+    }
+    ul li:hover .dropdown {
+      display: block;
+    }
+    .dropdown li {
+        display: block;
+        width: 100%;
+    }
+    .dropdown li a:hover{
+
+        background-color: black;
+        color: white;
+    }
+    .dropdown li a{
+        padding: 10px;
+        color: black;
+        background-color: bisque;
+      
+        
+    }
+    .dropdown1{
+        display: none;
+        position: absolute;
+    }
+    ul li:hover .dropdown1 {
+      display: block;
+     
+    }
+    .dropdown1 li a:hover {
+       background-color: black;
+        color: white;
+       
+    }
+    .dropdown1 li {
+        display: block;
+       
+    }
+    .dropdown1 li a{
+        padding:10px;
+        color: black;
+        background-color: bisque;
+        text-align: center;
+       
+    }
+    .cipher{
+        display:none;
+        position: absolute;
+        justify-items: center;
+        background-color: #333bac;
+    }
+    ul li:hover .cipher{
+        display: inline-block;
+        position: absolute;
+        justify-items: center;
+        transition: 2s;
+    }
+    .cipher li {
+        display: inline-block;
+        width: 1800px;
+         height: 900px;
+        background-color: bisque;
+        border: 1px solid black;
+        margin-left: 30px;
+        
+    }
+    .cipher li p{
+        padding: 10px;
+        color: black;
+       text-align: justify;
+       background-color: rgb(0, 0, 0);
+      
+    }
+    .castorice{
+        display:none;
+        position: absolute;
+        justify-items: center;
+        background-color: rgb(218, 25, 208);
+    }
+    ul li:hover .castorice{
+        display: inline-block;
+        position: absolute;
+        justify-items: center;
+    }
+    .castorice li {
+        display: inline-block;
+        width: 1800px;
+         height: 900px;
+        background-color: rgb(206, 61, 219);
+        border: 1px solid black;
+       
+        margin-left: 30px;
+        color: white;
+    }
+    .castorice li p{
+        padding: 10px;
+        color: rgb(255, 255, 255);
+       text-align: justify;
+       background-color: rgb(101, 10, 143);
+      
+    }
+    .hyacine{
+        display:none;
+        position: absolute;
+        justify-items: center;
+        background-color: cyan ;
+    }
+    ul li:hover .hyacine{
+        display: inline-block;
+        position: absolute;
+        justify-items: center;
+    }
+    .hyacine li {
+        display: inline-block;
+        width: 1800px;
+         height: 900px;
+        background-color: pink;
+        border: 1px solid black;
+        
+        margin-left: 30px;
+        color: rgb(0, 0, 0);
+    }
+    .hyacine li p{
+        padding: 10px;
+        color: rgb(0, 0, 0);
+       text-align: justify;
+       background-color: rgb(233, 81, 119);
+      
+    }
+    .aglaea{
+        display:none;
+        position: absolute;
+        justify-items: center;
+        background-color: rgb(255, 209, 139);
+    }
+    ul li:hover .aglaea{
+        display: inline-block;
+        position: absolute;
+        justify-items: center;
+    }
+    .aglaea li {
+        display: inline-block;
+        width: 1800px;
+         height: 900px;
+        background-color: gold;
+        border: 1px solid black;
+        
+        margin-left: 30px;
+        
+    }
+    .aglaea li p{
+        padding: 10px;
+        color: black;
+       background-color: rgb(255, 255, 255);
+      
+    }
+    .mydeimos{
+        display:none;
+        position: absolute;
+        justify-items: center;
+        background-color: rgb(255, 210, 156);
+    }
+    ul li:hover .mydeimos{
+        display: inline-block;
+        position: absolute;
+        justify-items: center;
+    }
+    .mydeimos li {
+        display: inline-block;
+        width: 1800px;
+         height: 900px;
+        background-color: rgb(255, 94, 94);
+        border: 1px solid black;
+        
+        margin-left: 30px;
+        color: white;
+    }
+    .mydeimos li p{
+        padding: 10px;
+        color: black;
+       background-color: rgb(255, 255, 255);
+      
+    }
+    .tribios{
+        display:none;
+        position: absolute;
+        justify-items: center;
+        background-color: rgb(255, 0, 0);
+    }
+    ul li:hover .tribios{
+        display: inline-block;
+        position: absolute;
+        justify-items: center;
+    }
+    .tribios li {
+        display: inline-block;
+        width: 1800px;
+         height: 900px;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid black;
+       
+        margin-left: 30px;
+        
+    }
+    .tribios li p{
+        padding: 10px;
+        color: black;
+       background-color: rgb(46, 95, 255);
+      
+    }
+    .anaxa{
+        display:none;
+        position: absolute;
+        justify-items: center;
+        background-color: rgb(0, 81, 255);
+    }
+    ul li:hover .anaxa{
+        display: inline-block;
+        position: absolute;
+        justify-items: center;
+    }
+    .anaxa li {
+        display: inline-block;
+        width: 1800px;
+         height: 900px;
+        background-color: rgb(2, 255, 200);
+        border: 1px solid black;
+       
+        margin-left: 30px;
+        
+    }
+    .anaxa li p{
+        padding: 10px;
+        color: black;
+       background-color: rgb(0, 0, 0);
+      
+    }
+    .footerlist li a:hover{
+        border-bottom: 1px solid rgb(255, 255, 255);
+        ;
+    }
+    ul li a:hover{
+        border-bottom: 1px solid rgb(0, 0, 0);
+        ;
+    }
+    .dropprofile{
+        display: none;
+        position: absolute;
+    }
+    ul li:hover .dropprofile {
+      display: block;
+    }
+    .dropprofile li {
+        display: block;
+        width: 100%;
+    }
+    .dropprofile li {
+        padding: 10px;
+        color: black;
+       text-align: center;
+       background-color: bisque;
+    }
+    .dropprofile li a:hover{
+        background-color: black;
+        color: white;
+    }
+  
+    footer{
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        height: 100%;
+        
+    } 
+    
+    .foooter{
+        width: 100%;
+        padding:70px 30px 20px;
+    }
+    .sosialicon{
+        display: flex;
+        justify-content: center;
+    }
+    .sosialicon a{
+        text-decoration: none;
+       background-color: white;
+        padding: 10px;
+        border-radius:50%;
+        margin: 10px;
+    }
+    .sosialicon a i{
+        font-size: 2em;
+        color: rgb(0, 0, 0);
+        opacity: 0.9;
+       
+    }
+    .sosialicon a:hover{
+        background-color: black;
+        transition: 0.5s;
+    }
+    .sosialicon a:hover i{
+        color: white;
+        transition: 0.5s;
+    }
+    .footernav{
+        margin: 30px 0;
+    }
+    .footernav ul{
+        display: flex;
+        justify-content: center;
+    }
+    .footernav ul li a{
+        color: rgb(255, 255, 255);
+        margin: 20px;
+        text-decoration: none;
+        font-size: 1.3em;
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+    .footernav ul li a:hover{
+        opacity: 1;
+    }
+    .foooterbottom{
+        background-color: #000;
+        padding:20px;
+        text-align: center;
+        align-items: center;
+    }
+    .footerbottom p{
+        color: white;
+       text-align: center;
+    }
+    .designer{
+        opacity: 0.7;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight:400;
+        margin:0px 5px;
+    }
+    .box-1,.box-2,.box-3,.box-4,.box-5,.box-6,.box-7{
+        width: 800px;
+        height: 900px;
+        border: 1px solid #000;
+        margin: 5px;
+        font-size:24px;
+        margin: 30px;
+        background-color: white;
+       
+
+    }
+    .box-1 img,.box-2 img,.box-3 img,.box-4 img,.box-5 img,.box-6 img,.box-7 img{
+        width: 700px;
+        margin: 40px;
+        border: 3px solid #000;
+       
+    }
+   
+    .kotak1{
+        width: 600px;
+        height: 600px;
+        border:1px solid #000;
+        margin: 30px;
+        background-color: white;
+        color: rgb(78, 73, 73);
+        transition-duration: 1s;
+    }
+    .kotak1 p{
+        display: none;
+    }
+    .kotak1 img{
+        width: 600px;
+        height: 600px;
+    }
+    .kotak1:hover p{
+        display: block;
+    }
+    
+    .kotak1:hover{
+        height: 1250px;
+        
+    }
+    h3{
+        font-size: 40px;
+        align-self: center;
+        border-bottom: 1px solid #000;
+       border-top: #000 1px solid;
+       background-color: #ffe388;
+    }
+    h2{
+        font-size: 40px;
+        align-self: center;
+        border-bottom: 1px solid #000;
+       border-top: #000 1px solid;
+       
+    }
+    .kotak1 p{
+       text-align: justify;
+    }
+</style>
+<body>
+    <div class="container">
+       
+    </div>
+
+    <nav>
+    <div class="container2"> 
+        <ul>
+            <li><img src="Gambar/download (2).jpeg" alt="">
+                <ul class="dropprofile">
+                    <li ><a href="#">Profile</a></li>
+                    <li><a href="#">Setting</a></li>
+                    <li><a href="login.html">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="jawa">
+            Sasaki
+        </div>
+    </div>
+    
+        <ul>
+            <li><a  href="#" class="active">home</a></li>
+            <li><a href="#">menu</a>
+             <ul class="dropdown">
+                <li><a href="#">test </a></li>
+                <li><a href="#">test </a></li>
+                <li><a href="#">test </a></li>
+             </ul>
+            </li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">location</a></li>
+            <li><a href="#">other</a>
+            <ul class="dropdown1">
+                <li><a href="#">test</a></li>
+                <li><a href="#">test </a></li>
+                <li><a href="#">test </a></li>
+                <li><a href="#">test </a></li>
+                <li><a href="#">test </a></li>
+            </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="container3">
+
+<div class="kotak1">
+    <img src="Gambar/jarilo-vi-trailblazer-for-scale-v0-8k00d7pkq71b1.jpg" alt="">
+    <p>Jarilo-VI adalah planet bersalju di Honkai: Star Rail yang sebagian besar permukaannya membeku akibat fenomena Eternal Freeze yang dipicu oleh kehadiran Stellaron. Satu-satunya kota yang masih layak huni adalah Belobog, tempat manusia bertahan hidup dengan perlindungan teknologi dan sistem sosial yang ketat. Di luar Belobog, planet ini sangat berbahaya dan nyaris tak berpenghuni karena cuaca ekstrem dan ancaman Fragmentum. Petualangan utama pemain di Jarilo-VI berfokus pada mengungkap misteri di balik Stellaron, konflik antara penghuni permukaan dan bawah tanah, serta upaya memulihkan keseimbangan dan kedamaian di planet tersebut</p>
+</div>
+<div class="kotak1">
+    <img src="Gambar/Full Xianzhou Luofu Storyline.webp" class="img1" alt="">
+    <p>Xianzhou Luofu adalah salah satu dari enam kapal utama aliansi Xianzhou yang berlayar di lautan bintang tanpa henti. Kapal ini berfungsi sebagai markas besar dan pusat aktivitas berbagai komisi seperti Divination, Artisanship, dan Alchemy, serta menjadi tempat tinggal dan pusat perdagangan bagi banyak karakter dan pemain. Xianzhou Luofu juga merupakan peta eksplorasi dengan berbagai area seperti Central Starskiff Haven, Cloudford, dan Stargazer Navalia, yang penuh dengan misi, teka-teki, dan harta karun, menjadikannya lokasi penting dalam cerita dan gameplay Honkai: Star Rail</p>
+</div>
+<div class="kotak1">
+    <img src="Gambar/Full Penacony Storyline.webp" alt="">
+    <p>Penacony adalah planet keempat yang dikunjungi Astral Express di Honkai: Star Rail, dikenal sebagai “Planet of Festivities.” Dahulu, Penacony merupakan koloni penjara milik Interastral Peace Corporation (IPC), namun setelah perang kemerdekaan, planet ini berubah menjadi pusat hiburan dan budaya yang dikelola oleh kelompok The Family, yang mengabdi pada Aeon of Harmony, Xipe. Penacony kini mirip hotel raksasa di luar angkasa, tempat berbagai tamu dari seluruh galaksi datang untuk menikmati festival dan mimpi—khususnya Charmony Festival. Namun, di balik kemewahan dan suasana pesta, Penacony menyimpan sejarah kelam, misteri seputar Dreamscape (dunia mimpi), dan bencana Stellaron yang menjadi inti cerita utama di planet ini</p>
+</div>
+<div class="kotak1">
+    <img src="Gambar/World_Amphoreus.webp" alt="">
+    <p>Amphoreus adalah planet kelima yang bisa dijelajahi di Honkai: Star Rail, diperkenalkan pada versi 3.0. Planet ini terinspirasi dari mitologi Yunani-Romawi, terlihat dari arsitektur, motif, dan nama-nama karakternya. Amphoreus dikenal sebagai "Eternal Land" dan memiliki nuansa misterius karena bahkan Aeon Akivili belum pernah mengunjunginya, serta hanya bisa dilihat melalui cermin Garden of Recollection. Planet ini juga unik karena terikat oleh tiga Path utama—Erudition, Remembrance, dan Destruction—yang berperan penting dalam ceritanya. Selain menawarkan area eksplorasi terbesar sejauh ini, Amphoreus juga menghadirkan mekanik baru seperti Thermae (pemandian air panas ala Yunani kuno) dan kisah konflik panjang antara para dewa dan manusia yang membentuk sejarah serta suasana planet tersebut</p>
+</div>
+    </div>
+    
+    <div class="container4">
+    <div class="box-1">
+     <ul>
+        <li><img src="Gambar/ᯓ𝘾𝙞𝙥𝙝𝙚𝙧🪙.jpeg" alt="">
+            
+        <ul class="cipher">
+            <li><p>
+                <h2>Kit Character</h2> <br>
+                Basic Attack:
+Basic attack Cipher bernama Past the Radar memberikan Quantum DMG ke satu musuh, dengan scaling berdasarkan ATK Cipher. Serangan ini sederhana dan berfungsi sebagai fondasi untuk membangun kombo, namun kontribusi damage-nya tidak sebesar skill atau ultimate-nya. Basic attack ini lebih sering digunakan untuk mengisi giliran atau memicu efek pasif saat skill dan ultimate sedang cooldown.
+<br> <br>
+Skill:
+Skill Cipher, Empty-Handed Haul, memberikan Quantum DMG ke musuh utama dan musuh di sampingnya, sekaligus memiliki peluang tinggi untuk melemahkan (weaken) musuh yang terkena selama dua giliran. Selain itu, skill ini juga meningkatkan ATK Cipher secara signifikan untuk beberapa giliran, sehingga memperkuat serangan berikutnya. Skill ini sangat efektif untuk menurunkan potensi damage musuh sekaligus memperkuat Cipher sendiri.
+<br> <br>
+Ultimate:
+Ultimate Cipher, Sincerely Kitty Phantom Thief, merupakan serangan single-target Quantum DMG yang sangat kuat. Setelah memberikan Quantum DMG ke satu musuh, ultimate ini juga melepaskan "True Damage" berdasarkan nilai damage yang telah direkam oleh talent Cipher, lalu menyebarkan sebagian damage tersebut ke musuh di samping target utama. Ultimate ini menjadi puncak burst damage Cipher, terutama jika nilai damage yang direkam sebelumnya sudah tinggi.
+<br> <br>
+Talent:
+Talent utama Cipher memungkinkan dia merekam (record) sejumlah damage yang diterima musuh dari serangan follow-up attack miliknya. Setiap kali Cipher melakukan follow-up attack (yang bisa dipicu oleh kondisi tertentu), damage yang dihasilkan akan disimpan sebagai "recorded value." Nilai ini kemudian digunakan oleh ultimate untuk menghasilkan True Damage tambahan. Selain itu, Cipher juga dapat menandai musuh dengan status khusus seperti "Foretold" atau "Regular Customer," yang membuat mereka lebih rentan terhadap follow-up attack dan debuff. Talent ini menjadikan Cipher sangat efektif sebagai DPS yang mengandalkan burst damage dan debuff secara bersamaan <br> <br> <br> <br></p></li>
+        </ul>
+        </li>
+     </ul>
+     <h3 align="center">Cipher</h3>
+        
+       
+       
+    
+    </div>
+    <div class="box-2">
+        <ul>
+            <li><img src="Gambar/castorice ʚɞ __ honkai star rail, hsr.jpeg" alt="">
+                
+            <ul class="castorice">
+                <li><p>
+                    <h2>Kit Character</h2> <br>
+                    Basic Attack: Castorice menggunakan serangan dasar bernama Netherwing Slash yang memberikan damage Quantum ke satu musuh. Damage dari serangan ini berskala berdasarkan Max HP Castorice, sehingga fokus membangun HP akan sangat meningkatkan output serangan dasarnya. Basic attack ini juga dapat memicu efek tambahan yang berkaitan dengan status dan mekanik unik Castorice. <br> <br>
+
+Skill: Skill Castorice bernama Netherwing Barrage adalah serangan AoE Quantum yang mengonsumsi HP dari seluruh anggota tim kecuali memosprite "Death Dragon". Skill ini memberikan damage ke semua musuh di medan pertempuran sekaligus dan memicu status "Death Flower" yang memungkinkan Castorice dan memosprite-nya mengabaikan sebagian pertahanan musuh selama beberapa giliran, sehingga meningkatkan efektivitas serangan berikutnya. <br> <br>
+
+Ultimate: Ultimate Castorice, Death's Rar Becomes Renaissance Bell, memanggil memosprite "Death Dragon" yang memiliki HP setara 100% Max HP Castorice dan kecepatan tinggi. Setelah pemanggilan, Castorice mendapatkan tambahan aksi sebesar 100%, sehingga langsung bisa bertindak lagi. Ultimate ini juga menciptakan area bernama "Lost Netherland" yang mengurangi semua tipe Resistance musuh, membuat musuh lebih rentan terhadap serangan. Death Dragon dapat menyerang hingga tiga kali dan berfungsi sebagai pelindung dengan menanggung damage untuk anggota tim. <br> <br>
+
+Talent dan Mekanik Unik: Talent Castorice berfokus pada peningkatan damage berdasarkan jumlah HP yang dikonsumsi dan status "Death Flower" yang aktif. Mekanik uniknya melibatkan konsumsi HP tim sebagai sumber daya utama untuk melancarkan serangan AoE besar. Status "Death Flower" yang diperoleh dari Light Cone tertentu memungkinkan Castorice dan Death Dragon mengabaikan 30% DEF musuh selama dua giliran. Selain itu, Castorice memiliki kemampuan revive anggota tim sekali per pertempuran, memberikan nilai tambah dalam bertahan hidup tim.
+      <br> <br>  <br>   <br> <br>    </p></li>
+            </ul>
+            </li>
+         </ul>
+         <h3 align="center">Castorice</h3>
+    </div>
+    <div class="box-3">
+        <ul>
+            <li><img src="Gambar/﹙🌸﹚﹒𝙃𝙮𝙖𝙘𝙞𝙣𝙚.jpeg" alt="">
+                
+            <ul class="hyacine">
+                <li><p>
+                    <h2>Kit Character</h2> <br>
+                    Basic Attack: Basic attack Hyacine memberikan damage Wind ke satu musuh. Serangan ini sederhana dan berfungsi sebagai sumber utama pengisian skill point. Walaupun scaling-nya tidak sebesar skill atau ultimate, basic attack tetap penting untuk rotasi tim dan menjaga ketersediaan skill point, terutama pada tim yang membutuhkan banyak pengelolaan skill point. <br> <br>
+
+Skill: Skill Hyacine memiliki mekanik unik berupa “HP Burn” pada anggota tim sebelum memberikan penyembuhan. Saat digunakan, skill ini lebih dulu mengurangi sebagian kecil HP anggota tim (termasuk dirinya sendiri), lalu secara bertahap memulihkan HP mereka. Efek heal yang diberikan tidak langsung besar, melainkan berupa penyembuhan kecil namun sering, sehingga sangat cocok untuk tim dengan mekanik pengorbanan HP atau yang sering menerima chip damage. Skill ini juga dapat memicu efek tambahan pada karakter dengan mekanik HP Burn, seperti Castorice atau Blade. <br> <br>
+
+Ultimate: Ultimate Hyacine berfungsi sebagai alat sustain sekaligus utilitas tim. Saat diaktifkan, ultimate-nya langsung menghasilkan skill point tambahan untuk tim dan memberikan efek heal area yang memulihkan HP seluruh anggota party. Selain itu, ultimate ini juga dapat memperkuat efek penyembuhan dari skill dan meningkatkan kecepatan rotasi tim. Ultimate Hyacine sangat berguna di tim yang membutuhkan sustain berkelanjutan dan pengelolaan skill point yang efisien. <br> <br>
+
+Talent: Talent utama Hyacine berfokus pada interaksi dengan mekanik HP Burn. Setiap kali anggota tim kehilangan HP akibat efek Burn dari skill Hyacine, mereka mendapatkan buff tambahan yang meningkatkan efektivitas penyembuhan atau ketahanan mereka. Talent ini membuat Hyacine sangat sinergis dengan karakter-karakter yang mengorbankan HP untuk mendapatkan efek tambahan, serta memperkuat peranannya sebagai healer yang unik di Path Remembrance
+  <br><br><br><br> <br>             </p></li>
+            </ul>
+            </li>
+         </ul>
+         <h3 align="center">Hyacine</h3>
+    </div>    
+    <div class="box-4">
+        <ul>
+            <li><img src="Gambar/☆.jpeg" alt="">
+                
+            <ul class="aglaea">
+                <li><p>
+                    <h2>Kit Character</h2> <br>
+                    Basic Attack: Basic Attack Aglaea memberikan Lightning damage ke satu musuh. Serangan ini sederhana dan berfungsi sebagai sumber utama pengisian skill point serta menjaga rotasi aksi Aglaea di medan tempur. Walaupun scaling-nya tidak sebesar skill atau ultimate, basic attack ini tetap penting untuk mempertahankan ritme serangan, terutama saat memanfaatkan SPD tinggi yang menjadi salah satu kekuatan Aglaea. <br> <br>
+
+                    Skill: Skill Aglaea berfungsi ganda: jika memosprite Garmentmaker belum ada di medan pertempuran, skill ini akan langsung memanggilnya dan Garmentmaker akan segera bertindak. Jika Garmentmaker sudah ada, skill Aglaea akan memulihkan sejumlah HP Garmentmaker, menjaga summon tetap bertahan lebih lama di medan tempur. Skill ini juga memperkuat sinergi antara Aglaea dan Garmentmaker, memastikan summon selalu aktif untuk mendukung serangan dan efek tambahan. <br> <br>
+                    
+                    Ultimate: Ultimate Aglaea, Dance Destined Weaveress, juga berkaitan erat dengan Garmentmaker. Jika summon belum aktif, ultimate akan memanggil Garmentmaker dan jika sudah ada, HP-nya akan dipulihkan penuh. Selain itu, ultimate ini menempatkan Aglaea dalam stance khusus yang meningkatkan SPD dan memperkuat Basic Attack-nya. Selama stance ini, Garmentmaker menjadi kebal terhadap efek Crowd Control, sehingga dapat terus memberikan kontribusi tanpa terganggu oleh debuff musuh. <br> <br>
+                    
+                    Talent: Talent utama Aglaea berfokus pada peningkatan damage dan efektivitas serangan melalui interaksi dengan SPD. Aglaea mendapatkan tambahan ATK berdasarkan SPD miliknya, sehingga semakin tinggi SPD, semakin besar pula damage yang dihasilkan. Talent ini juga memungkinkan Aglaea untuk menyerang lebih sering dan memberikan efek debuff “Seam Snitch” pada musuh, membuat mereka menerima Additional DMG dari serangan selanjutnya. <br> <br>
+                    <br> <br> <br> <br>
+                    
+                </p></li>
+            </ul>
+            </li>
+         </ul>
+         <h3 align="center">Aglaea</h3>
+    </div> 
+    <div class="box-5">
+        <ul>
+            <li><img src="Gambar/ʜᴏɴᴋᴀɪ_ sᴛᴀʀ ʀᴀɪʟ ɪᴄᴏɴ.jpeg" alt="">
+                
+            <ul class="mydeimos">
+                <li><p>
+                    <h2>Kit Character</h2> <br>
+                    Basic Attack:
+                    Basic Attack Mydei bernama Vow of Voyage, yang memberikan damage Imaginary ke satu musuh dengan skala berdasarkan persentase HP maksimal Mydei. Serangan ini memiliki prioritas upgrade paling rendah karena Mydei lebih mengandalkan skill dan ultimate untuk menghasilkan damage utama.
+                    <br><br> 
+                    Skill:
+                    Skill Mydei bernama Deaths are Legion, Regrets are None, yang mengorbankan sebagian HP Mydei untuk memberikan damage Imaginary yang besar kepada musuh. Skill ini juga memicu pengisian Charge yang berperan penting dalam mekanik unik Mydei, serta meningkatkan damage saat dalam status Vendetta.
+                    <br> <br>
+                    Ultimate:
+                    Ultimate Mydei adalah Godslayer Be God, yang memberikan damage Imaginary AoE sekaligus memulihkan HP Mydei dan memancing (taunt) musuh. Jika digunakan saat dalam status Vendetta, HP Mydei langsung pulih penuh dan Mydei mendapatkan giliran ekstra, membuat ultimate ini sangat kuat untuk pertarungan melawan banyak musuh.
+                    <br> <br>
+                    Talent:
+                    Talent utama Mydei adalah Blood for Blood, yang mengubah cara kerja HP dan Charge-nya. Saat kehilangan HP, Mydei mengumpulkan Charge hingga mencapai 100, lalu memasuki status Vendetta yang meningkatkan Max HP, membuatnya imun terhadap crowd control, dan memberikan buff besar pada skill dan ultimate. Dalam Vendetta, Mydei juga dapat bertahan dari serangan fatal dengan HP minimal 1, sehingga sangat tahan banting. Mekanik ini menuntut manajemen HP yang cermat untuk memaksimalkan potensi damage dan ketahanan Mydei
+                    <br> <br> <br> <br> <br> <br> <br>
+                    
+                </p></li>
+            </ul>
+            </li>
+         </ul>
+         <h3 align="center">Mydeimos</h3>
+    </div>   
+    <div class="box-6">
+        <ul>
+            <li><img src="Gambar/d08e27f45296da92ec431a50af2035c7.jpg" alt="">
+                
+            <ul class="tribios">
+                <li><p>
+                    <h2>Kit Character</h2> <br>
+                    Basic Attack:
+Basic Attack Tribbie bernama Hundred Rockets, memberikan Quantum DMG sebesar 15% dari Max HP Tribbie ke satu musuh utama dan 7% dari Max HP Tribbie ke musuh di samping target utama. Seluruh damage dari basic attack ini berskala dengan Max HP, sehingga semakin besar HP Tribbie, semakin besar pula kontribusi chip damage yang diberikan ke seluruh musuh di garis depan. <br> <br>
+
+Skill:
+Skill Tribbie, Where’d the Gifts Go, memberikan buff “Numinosity” selama 3 giliran. Selama efek ini aktif, seluruh anggota tim mendapatkan peningkatan All-Type RES PEN sebesar 12%, sehingga serangan mereka mampu menembus pertahanan musuh dengan lebih efektif. Efek buff ini sangat penting untuk meningkatkan output damage tim, terutama pada komposisi yang mengandalkan burst atau AoE. <br> <br>
+
+Ultimate:
+Ultimate Tribbie, Guess Who Lives Here, menciptakan sebuah Zone di medan tempur dan memberikan Quantum DMG sebesar 15% dari Max HP Tribbie ke semua musuh. Selama Zone ini aktif (2 giliran), musuh menerima peningkatan DMG taken sebesar 15%. Selain itu, setiap kali anggota tim menyerang, untuk setiap target yang terkena, akan terjadi tambahan Quantum DMG sebesar 6% dari Max HP Tribbie ke musuh dengan HP tertinggi di antara target yang terkena. Ultimate ini memperkuat serangan tim dan mempercepat penghabisan musuh, terutama dalam pertarungan multi-target. <br> <br>
+
+Talent:
+Talent Tribbie, Busy as Tribbie, memungkinkan Tribbie melakukan Follow-up Attack setiap kali anggota tim lain menggunakan Ultimate, memberikan Quantum DMG sebesar 9% dari Max HP Tribbie ke semua musuh. Efek ini hanya bisa terjadi satu kali per karakter, dan jumlah trigger akan di-reset setiap kali Tribbie menggunakan Ultimate. Jika musuh utama kalah sebelum Follow-up Attack terjadi, serangan ini akan dialihkan ke musuh baru yang muncul. Talent ini memperkuat peran Tribbie sebagai support sekaligus sub-DPS yang konsisten memberikan chip damage sepanjang pertarungan <br> <br> <br> <br> <br> <br>
+                    
+                </p></li>
+            </ul>
+            </li>
+         </ul>
+         <h3 align="center">Tribios</h3>
+    </div>   
+    <div class="box-7">
+        <ul>
+            <li><img src="Gambar/cca20b85b73ef68dde97b74ac4520400.jpg" alt="">
+                
+            <ul class="anaxa">
+                <li><p>
+                    <h2>Kit Character</h2> <br>
+                    Basic Attack:
+Basic Attack Anaxa bernama Torment Brew Truth, memberikan Wind DMG ke satu musuh dengan scaling berdasarkan ATK Anaxa. Serangan ini sederhana namun efektif sebagai sumber damage tunggal, meskipun prioritas peningkatan levelnya biasanya paling rendah dibanding skill dan ultimate karena kontribusi damage utamanya berasal dari kemampuan AoE dan mekanik weakness miliknya. <br> <br>
+
+Skill:
+Skill Anaxa, Fractal Banishes Falsehoods, memberikan Wind DMG ke satu musuh utama lalu memantul (bounce) ke empat musuh acak lainnya, memprioritaskan target yang belum terkena. Setiap pantulan memberikan Wind DMG dengan scaling ATK, menjadikan skill ini sangat efektif untuk membersihkan banyak musuh sekaligus atau mendistribusikan debuff weakness ke seluruh tim lawan. <br> <br>
+
+Ultimate:
+Ultimate Anaxa, Genesis of Budding Life, memberikan Wind DMG besar ke semua musuh sekaligus menginflicti status Sublimation. Dalam status ini, seluruh musuh akan menerima tujuh jenis Weakness sekaligus selama satu giliran, dan jika musuh tidak memiliki Control RES, mereka tidak dapat bergerak selama status ini aktif. Ultimate ini sangat kuat untuk memaksimalkan damage tim dan mengontrol pergerakan musuh dalam satu rotasi. <br> <br>
+
+Talent:
+Talent Anaxa, Tetrad Wisdom, Trinity Supreme, memungkinkan setiap serangan Anaxa (basic, skill, atau ultimate) mengaplikasikan satu random Type Weakness ke musuh, memprioritaskan Weakness yang belum dimiliki target. Jika musuh sudah memiliki minimal lima Weakness berbeda, Anaxa akan mengaktifkan status Exposed Nature, meningkatkan damage yang ia berikan ke target tersebut hingga 60% dan memberinya satu penggunaan skill tambahan tanpa mengonsumsi skill point. Talent ini adalah inti dari mekanik Anaxa, memungkinkan dia menjadi DPS sekaligus debuffer yang sangat efektif dalam berbagai komposisi tim <br> <br> <br> <br> <br> <br> 
+                    
+                </p></li>
+            </ul>
+            </li>
+         </ul>
+         <h3 align="center">Anaxagoras</h3>
+    </div>     
+    </div>
+         
+<footer>
+    <div class="footer">
+        <div class="sosialicon">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <div class="footernav">
+            <ul class="footerlist">
+                <li><a href="#">home</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">data</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </div>
+        <div class="footerbottom">
+            <p>Copyright &copy; 2025 Designed by <span class="designer">Sasaki</span></p>
+        </div>
+    </div>
+</footer>
+</div>
+</body>
+</html>
